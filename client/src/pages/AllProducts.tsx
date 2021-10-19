@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Loader from 'react-loader-spinner'
 import { ProductList } from 'components'
-// eslint-disable-next-line
 import { fetchAllItems } from 'api'
 import { Item } from 'types'
 

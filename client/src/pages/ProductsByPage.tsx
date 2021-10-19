@@ -58,7 +58,7 @@ export const ProductsByPage = () => {
         {loading ? '🚫' : '👈'}
       </button>
     ) : (
-      <button className='btn'></button>
+      <button className='btn' role='presentation'></button>
     )
 
   const NextBtn = () =>
@@ -75,15 +75,15 @@ export const ProductsByPage = () => {
         {loading ? '🚫' : '👉'}
       </button>
     ) : (
-      <button className='btn'></button>
+      <button className='btn' role='presentation'></button>
     )
 
   const onKeyDown = useCallback((e: KeyboardEvent) => {
     switch (e.key) {
       case 'ArrowRight':
-        return nextBtnRef?.current?.click()
+        return nextBtnRef.current?.click()
       case 'ArrowLeft':
-        return prevBtnRef?.current?.click()
+        return prevBtnRef.current?.click()
       default:
         return
     }

@@ -75,7 +75,7 @@ export const useLoadPage = (fetchItems: FetchItems): UseLoadPageReturn => {
   }
 
   function loadPrev() {
-    if (currentPage.current > 1) {
+    if (currentPage.current > firstPage.current) {
       const nextPage = currentPage.current - 1
       loadPage(nextPage)
     }

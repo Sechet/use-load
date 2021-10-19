@@ -1,13 +1,13 @@
 import type { Item } from 'types'
 
+type Props = {
+  product: Item
+}
+
 const formatCurrency = new Intl.NumberFormat([], {
   style: 'currency',
   currency: 'EUR'
 })
-
-type Props = {
-  product: Item
-}
 
 export const ProductCard: React.FC<Props> = ({ product }) => {
   const { title, description, price, image } = product

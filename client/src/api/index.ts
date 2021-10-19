@@ -1,4 +1,4 @@
-import { AllItems, MoreItems } from 'types'
+import { AllItems, FetchItems } from 'types'
 
 const SERVER_URL = 'http://localhost:4000'
 
@@ -16,7 +16,7 @@ export const fetchAllItems = async (): Promise<AllItems> => {
   }
 }
 
-export const fetchMoreItems = async (page: number): Promise<MoreItems> => {
+export const fetchMoreItems: FetchItems = async (page: number) => {
   let data = { items: [], totalPages: 0 }
   try {
     const res = await fetch(`${SERVER_URL}/more-items?page=${page}`)
@@ -30,7 +30,7 @@ export const fetchMoreItems = async (page: number): Promise<MoreItems> => {
   }
 }
 
-export const fetchItemsByPage = async (page: number): Promise<MoreItems> => {
+export const fetchItemsByPage: FetchItems = async (page: number) => {
   let data = { items: [], totalPages: 0 }
   try {
     const res = await fetch(`${SERVER_URL}/items-by-page?page=${page}`)
