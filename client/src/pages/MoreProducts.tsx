@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import Loader from 'react-loader-spinner'
 import { ProductList } from 'components'
-import { fetchMoreItems } from 'api'
+import { fetchItemsAndPages } from 'api'
 import { useLoadMore } from 'hooks/useLoadMore'
 
 export const MoreProducts = () => {
-  const { loading, items, loadMore, hasMore } = useLoadMore(fetchMoreItems)
+  const { loading, items, loadMore, hasMore } = useLoadMore(fetchItemsAndPages)
 
   const Controls = () =>
     useMemo(
