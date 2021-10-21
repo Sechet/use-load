@@ -14,6 +14,7 @@ const sleep = async (ms) =>
 const app = express()
 
 app.use(cors())
+app.use(express.static('../client/build'))
 
 let allItems = []
 try {
