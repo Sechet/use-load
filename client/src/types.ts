@@ -19,8 +19,8 @@ export type AllItems = {
   items: Item[]
 }
 
-export type MoreItems = AllItems & {
+export type ItemsAndPages = AllItems & {
   totalPages: number
 }
 
-export type FetchItems = (page: number) => Promise<MoreItems>
+export type FetchItems = (page: number) => Promise<ItemsAndPages>

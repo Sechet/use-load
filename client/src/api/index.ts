@@ -16,7 +16,7 @@ export const fetchAllItems = async (): Promise<AllItems> => {
   }
 }
 
-export const fetchMoreItems: FetchItems = async (page: number) => {
+export const fetchItemsAndPages: FetchItems = async (page: number) => {
   let data = { items: [], totalPages: 0 }
   try {
     const res = await fetch(`${SERVER_URL}/more-items?page=${page}`)
