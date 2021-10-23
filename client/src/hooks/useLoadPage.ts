@@ -60,6 +60,8 @@ export const useLoadPage = (fetchItems: FetchItems): UseLoadPageReturn => {
   }, [])
 
   function loadPage(page: number) {
+    if (loading) return
+
     currentPage.current = page
 
     history.replace(`?page=${page}`)

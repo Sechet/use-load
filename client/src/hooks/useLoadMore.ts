@@ -42,7 +42,7 @@ export const useLoadMore = (fetchItems: FetchItems): UseLoadMoreReturn => {
   }, [])
 
   function loadMore() {
-    if (currentPage.current < allPages.current) {
+    if (currentPage.current < allPages.current && !loading) {
       const nextPage = currentPage.current + 1
 
       currentPage.current = nextPage
