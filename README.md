@@ -1,6 +1,6 @@
 # Custom React Hooks for Loading Additional Data :metal:
 
-> Hooks ▶ client/src/hooks
+> Hooks -> client/src/hooks
 
 Привет, друзья!
 
